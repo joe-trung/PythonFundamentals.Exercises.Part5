@@ -1,4 +1,5 @@
 def is_palindrome(value: str) -> bool:
+    return value.lower().replace(" ", "") == value[::-1].lower().replace(" ","")
     """
     This function determines if a word or phrase is a palindrome
 
@@ -14,4 +15,3 @@ def is_palindrome(value: str) -> bool:
     #         check = False
     # return check
 
-    return value == value[::-1}]

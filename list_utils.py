@@ -14,7 +14,6 @@ def get_item_at_position(list_in: List, pos: int) -> List:
     """
 
 
-
 def print_list_items(list_in: List) -> None:
     for item in list_in:
         print(item)
@@ -27,9 +26,8 @@ def print_list_items(list_in: List) -> None:
     """
 
 
-
 def sort_by_commit_count(list_in: List) -> List:
-    return sorted(list_in, key= lambda x: x[1])
+    return sorted(list_in, key=lambda x: x[1])
 
     """
     Given a list of entries, return a new list sorted based on the commit count.
@@ -39,8 +37,8 @@ def sort_by_commit_count(list_in: List) -> List:
     """
 
 
-
 def gen_list_of_nums(n: int) -> List[int]:
+    return list(range(0, n))
     """
     Given a number (N), this function returns a list of integers from 0 to N (exclusive).
 
@@ -49,11 +47,11 @@ def gen_list_of_nums(n: int) -> List[int]:
     """
 
 
-
 def half_list(list_in: List, half: int) -> List:
     if half == 1:
-        return list_in[:math.ceil(len(list_in)/2)]
-    if half == 
+        return list_in[:(math.ceil(len(list_in)/2))]
+    else:
+        return list_in[(-math.ceil(len(list_in)/2)):]
     """
     Given a list, this function will return a new list that contains half of the items in the list_in parameter.
 
@@ -64,11 +62,10 @@ def half_list(list_in: List, half: int) -> List:
     """
 
 
-
 def remove_odds(list_in: List[int]) -> None:
     for number in list_in:
         if number % 2 != 0:
-            list.remove(number)
+            list_in.remove(number)
     return list_in
 
     """
@@ -78,11 +75,10 @@ def remove_odds(list_in: List[int]) -> None:
     """
 
 
-
 def remove_evens(list_in: List[int]) -> None:
     for number in list_in:
-        if number%2==0:
-            list.remove(number)
+        if number % 2 == 0:
+            list_in.remove(number)
     return list_in
 
     """
@@ -92,9 +88,8 @@ def remove_evens(list_in: List[int]) -> None:
     """
 
 
-
 def concatenate_lists(list_a: List, list_b: List) -> List:
-    return list_a.extend(list_b)
+    return list_a + list_b
     """
     Given two lists, this function combines them and returns the result as a new list.
 
@@ -102,7 +97,6 @@ def concatenate_lists(list_a: List, list_b: List) -> List:
     :param list_b: Another list
     :return: A list containing all elements from list_a and list_b
     """
-
 
 
 def multiply_list(list_in: List, scalar: int) -> List:
