@@ -1,12 +1,14 @@
 
 def str_len(str_in: str) -> str:
+    return len(str)
     """
     Given a string parameter, this function should return the length of the parameter.
     """
-    pass  # remove pass statement and implement me
+
 
 
 def first_char(str_in: str) -> str:
+    return str[0]
     """
     Given a string parameter, this function should return the first letter of the parameter.
     """
